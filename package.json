@@ -11,8 +11,6 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.8",
     "axios": "^0.27.2",
-    "fabric": "^5.2.4",
-    "fabricjs-react": "^1.0.8",
     "joi": "^17.6.0",
     "joi-browser": "^13.4.0",
     "postcss": "^8.4.16",
