@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://twitterclonedevtown.herokuapp.com/:splat"
+  to = "https://guviproject7.herokuapp.com/:splat"
   status = 200
   force = true
 

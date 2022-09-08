@@ -8,7 +8,7 @@ const config = {
   },
 };
 export const verifyToken = createAsyncThunk("user/verifyToken", async () => {
-  const res = await axios.get("http://localhost:7000/verifytoken", config);
+  const res = await axios.get("https://guviproject7.herokuapp.com", config);
   return res.data;
 });
 
@@ -17,7 +17,7 @@ export const updateUser = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        "http://localhost:7000/update",
+        "https://guviproject7.herokuapp.com/",
         data,
         config
       );
@@ -32,7 +32,7 @@ export const loginUser = createAsyncThunk(
   "user/loginUser",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:7000/login", data);
+      const res = await axios.post("https://guviproject7.herokuapp.com", data);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -44,7 +44,7 @@ export const signupUser = createAsyncThunk(
   "user/signupUser",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:7000/signup", data);
+      const res = await axios.post("https://guviproject7.herokuapp.com", data);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -56,7 +56,7 @@ export const forgotPassword = createAsyncThunk(
   "user/forgotPassword",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:7000/signup", data);
+      const res = await axios.post("https://guviproject7.herokuapp.com", data);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -68,7 +68,7 @@ export const resetPassword = createAsyncThunk(
   "user/resetPassword",
   async (data, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:7000/resetpassword", data);
+      const res = await axios.post("https://guviproject7.herokuapp.com", data);
       return res.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -78,7 +78,7 @@ export const resetPassword = createAsyncThunk(
 export const isUserLoggedIn = createAsyncThunk(
   "user/isUserLoggedIn",
   async (data) => {
-    const res = await axios.post("http://localhost:7000/auth/", data);
+    const res = await axios.post("https://guviproject7.herokuapp.com/", data);
     return res.data;
   }
 );

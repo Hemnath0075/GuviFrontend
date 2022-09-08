@@ -8,15 +8,16 @@ import { Provider } from "react-redux";
 
 import { ThemeProvider } from "@material-tailwind/react";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+
+ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider>
         <App />
       </ThemeProvider>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 reportWebVitals();
